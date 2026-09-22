@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CodeLens — See what your code actually does.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header class="topbar"><div class="brand"><span class="lens-mark">+</span>CODELENS</div><div class="tagline">SEE WHAT YOUR CODE ACTUALLY DOES.</div><div class="status"><i></i><span id="statusText">LOCAL PYTHON RUNNER</span></div></header>
+<main class="workbench">
+<section class="panel source"><div class="panel-head"><span>SOURCE</span><span>main.py</span></div>
+<div class="editor-wrap"><div id="lineNumbers" class="line-numbers"></div><div id="marker"></div><textarea id="code" spellcheck="false">nums = [2, 4, 6]
+total = 0
+
+for n in nums:
+    total += n
+
+print(total)</textarea></div></section>
+<section class="panel state"><div class="panel-head"><span>EXECUTION</span><span id="stepLabel">STEP 00</span></div>
+<div class="block"><div class="title">VARIABLES</div><div id="variables" class="empty">Run the program to inspect state.</div></div>
+<div class="block"><div class="title">CALL STACK</div><div id="stack"></div></div>
+<div class="block output"><div class="title">OUTPUT</div><pre id="output"></pre></div>
+<div id="error" class="error hidden"></div></section>
+</main>
+<footer class="controls"><button id="run" class="run">RUN CODE <b>CTRL↵</b></button><button id="prev">◀ PREV</button><button id="next">NEXT ▶</button><button id="reset">RESET</button><div class="timeline-wrap"><div id="timeline"></div></div><span id="counter">00 / 00</span></footer>
+<script src="/static/app.js"></script></body></html>
